@@ -1,0 +1,146 @@
+body {
+font-family: 'Segoe UI', sans-serif;
+background-color: #f8f8f8;
+margin: 0;
+padding: 0;
+color: #333;
+}
+
+header {
+background-color: #1b1b1b;
+color: white;
+padding: 2rem;
+text-align: center;
+}
+
+header h1 {
+margin: 0;
+font-size: 2.5rem;
+}
+
+nav {
+display: flex;
+justify-content: space-around;
+background-color: #000;
+padding: 1rem;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+font-weight: bold;
+}
+
+.hero {
+padding: 4rem 2rem;
+text-align: center;
+background: linear-gradient(to bottom, #f0f0f0, #ddd);
+}
+
+.hero h2 {
+font-size: 2rem;
+}
+
+.hero p {
+font-size: 1.2rem;
+color: #666;
+}
+
+.cta-button {
+background-color: #00b894;
+color: white;
+padding: 1rem 2rem;
+border: none;
+border-radius: 4px;
+font-size: 1.2rem;
+cursor: pointer;
+margin-top: 2rem;
+}
+
+.cta-button:hover {
+background-color: #55efc4;
+}
+
+.fake-form {
+background: white;
+max-width: 600px;
+margin: 2rem auto;
+padding: 2rem;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.fake-form h3 {
+margin-bottom: 1rem;
+}
+
+.fake-form input {
+width: 100%;
+padding: 0.8rem;
+margin-bottom: 1rem;
+border: 1px solid #ccc;
+}
+
+.prechecked {
+margin-bottom: 1rem;
+}
+
+.prechecked input {
+margin-right: 8px;
+}
+
+footer {
+background-color: #1b1b1b;
+color: white;
+padding: 1rem;
+text-align: center;
+position: relative;
+}
+
+.unsubscribe {
+font-size: 0.7rem;
+color: #1b1b1b; /* Invisible on purpose */
+position: absolute;
+bottom: 5px;
+right: 10px;
+}
+
+.disguised-ad {
+background-color: #dfe6e9;
+padding: 1rem;
+margin: 2rem auto;
+width: 90%;
+max-width: 700px;
+text-align: center;
+border: 1px solid #ccc;
+}
+
+.disguised-ad:hover {
+background-color: #fab1a0;
+cursor: pointer;
+}
+/* Spinner button styling (in case JS fails to disable) */
+button:disabled {
+background-color: #ccc;
+cursor: not-allowed;
+}
+
+/* Optional: Improve modal appearance */
+#trapModal button {
+padding: 0.8rem 1.5rem;
+margin: 1rem;
+font-size: 1rem;
+cursor: pointer;
+}
+
+#noTrap {
+background-color: #ccc;
+border: none;
+color: #111;
+}
+
+#yesTrap {
+background-color: #27ae60;
+border: none;
+color: white;
+}
+
