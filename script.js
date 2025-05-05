@@ -22,6 +22,10 @@ document.getElementById("startTrialBtn").addEventListener("click", () => {
   document.getElementById("adBox").addEventListener("click", () => {
     window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"; // Replace with real ad
   });
+
+  document.getElementById("adBox2").addEventListener("click", () => {
+    window.location.href = "https://www.youtube.com/watch?v=fArweHa6HzU"; // Replace with real ad
+  });
   
   // Fake form submission trap with spinner
   document.getElementById("submitBtn").addEventListener("click", () => {
