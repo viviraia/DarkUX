@@ -16,6 +16,10 @@ No build step. Open `index.html` in a browser and click around (Home, Features, 
 | `show/` | Separate static showcase of 4 textbook examples (not part of the hunt) |
 | `help copy.html` | Old draft of the help page, not linked from anywhere |
 
+## Languages
+
+The site is available in English (default) and Brazilian Portuguese. Use the language button at the end of the nav bar; the choice is remembered in the browser. All translations live in `i18n.js` (elements carry `data-i18n` keys). The catalogue below quotes the English text, but every pattern is identical in Portuguese.
+
 ## Pattern catalogue (answer key)
 
 Difficulty: 🟢 easy (visible at first glance) · 🟡 medium (needs reading or a click) · 🔴 hard (hidden, or only appears after an interaction).

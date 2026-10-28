@@ -3,73 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Subscrivo - Manage Your Subscriptions</title>
+  <title data-i18n="index.title">Subscrivo - Manage Your Subscriptions</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <header>
     <h1>Subscrivo</h1>
-    <p>Finally, one place to manage every subscription (we promise...)</p>
+    <p data-i18n="index.tagline">Finally, one place to manage every subscription (we promise...)</p>
   </header>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="features.html">Features</a>
-    <a href="pricing.html">Pricing</a>
-    <a href="help.html">Help</a>
+    <a href="index.html" data-i18n="nav.home">Home</a>
+    <a href="features.html" data-i18n="nav.features">Features</a>
+    <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+    <a href="help.html" data-i18n="nav.help">Help</a>
+    <button type="button" id="langToggle" class="lang-toggle" data-i18n="lang.toggle">🇧🇷 Português</button>
   </nav>
   <section class="hero">
-    <h2>Take Back Control of Your Subscriptions</h2>
-    <p>Start your free trial now — no strings attached*</p>
-    
-    <button class="cta-button" id="startTrialBtn">Start My Trial</button>
-    <button class="cta-button decline" id="darkTrickBtn">No I dont like Money</button>
-    
-    <p class="tiny-note">*14-day trial auto-renews at $29.99/month</p>
-  
+    <h2 data-i18n="hero.h2">Take Back Control of Your Subscriptions</h2>
+    <p data-i18n="hero.p">Start your free trial now — no strings attached*</p>
+
+    <button class="cta-button" id="startTrialBtn" data-i18n="cta.start">Start My Trial</button>
+    <button class="cta-button decline" id="darkTrickBtn" data-i18n="cta.decline">No I dont like Money</button>
+
+    <p class="tiny-note" data-i18n="hero.note">*14-day trial auto-renews at $29.99/month</p>
+
     <!-- Hidden Credit Card Form -->
     <div id="creditCardForm">
-      <h3>Enter Payment Info</h3>
-      <input type="text" placeholder="Card Number" required />
-      <input type="text" placeholder="MM/YY" required />
-      <input type="text" placeholder="CVC" required />
-      <button class="cta-button" id="submitCardBtn">Start Trial Now</button>
+      <h3 data-i18n="card.h3">Enter Payment Info</h3>
+      <input type="text" placeholder="Card Number" data-i18n-ph="card.number" required />
+      <input type="text" placeholder="MM/YY" data-i18n-ph="card.mm" required />
+      <input type="text" placeholder="CVC" data-i18n-ph="card.cvc" required />
+      <button class="cta-button" id="submitCardBtn" data-i18n="card.submit">Start Trial Now</button>
     </div>
   </section>
 
-  <section class="disguised-ad" id="adBox">
+  <section class="disguised-ad" id="adBox" data-i18n="ad1">
     <strong>You may qualify for a $50 reward</strong><br>
     Click here to find out how
   </section>
 
   <section class="fake-form" id="formSection">
-    <h3>Create your account to continue</h3>
-    <input type="text" placeholder="Full Name" required />
-    <input type="email" placeholder="Email Address" required />
-    <input type="password" placeholder="Create Password" required />
-    
+    <h3 data-i18n="form.h3">Create your account to continue</h3>
+    <input type="text" placeholder="Full Name" data-i18n-ph="form.name" required />
+    <input type="email" placeholder="Email Address" data-i18n-ph="form.email" required />
+    <input type="password" placeholder="Create Password" data-i18n-ph="form.password" required />
+
     <div class="prechecked">
-      <label class = "checkbox-trick">
-        Subscribe me to partner offers and promotions.
-        
+      <label class="checkbox-trick">
+        <span data-i18n="form.check">Subscribe me to partner offers and promotions.</span>
         <input type="checkbox" checked />
       </label>
     </div>
-    
-    <button class="cta-button" id="submitBtn">Continue</button>
+
+    <button class="cta-button" id="submitBtn" data-i18n="form.continue">Continue</button>
   </section>
 
-  <section class="disguised-ad" id="adBox2">
+  <section class="disguised-ad" id="adBox2" data-i18n="ad2">
     <strong>Single Moms In Your Area🔥🔥🔥(2Km)</strong><br>
     Click here to connect with them
   </section>
 
   <footer>
-    &copy; 2025 Subscrivo Inc. All rights reserved.
-    <a href="#" class="unsubscribe">Unsubscribe</a>
+    <span data-i18n="footer.rights">&copy; 2025 Subscrivo Inc. All rights reserved.</span>
+    <a href="#" class="unsubscribe" data-i18n="footer.unsubscribe">Unsubscribe</a>
   </footer>
 
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
