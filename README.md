@@ -8,11 +8,14 @@ Everything on the site is a joke. Nothing is stored, no card details leave the b
 
 No build step. Open `index.html` in a browser and click around (Home, Features, Pricing, Help, FAQ).
 
+The site is available in English and Brazilian Portuguese. It picks the browser language by default; use the **PT / EN** button in the nav to switch. The language is kept in the URL (`?lang=pt` / `?lang=en`) and carried through every link, so you can also share a link that opens in a given language. The Portuguese version shows prices in R$. The answer key below quotes the English text.
+
 | File | What it is |
 |---|---|
 | `index.html` | Landing page with most of the patterns (trial, form, ads, modal) |
 | `features.html`, `pricing.html`, `help.html`, `FAQ.html` | Secondary pages |
 | `styles.css`, `script.js` | Shared styling and the interactive traps |
+| `i18n.js` | English and Portuguese text for every page, alert and the modal |
 | `show/` | Separate static showcase of 4 textbook examples (not part of the hunt) |
 | `help copy.html` | Old draft of the help page, not linked from anywhere |
 
