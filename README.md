@@ -45,7 +45,7 @@ Difficulty: 🟢 easy (visible at first glance) · 🟡 medium (needs reading or
 | 15 | **Friend spam / hidden sharing** | After "Continue" (with fake *Processing...* spinner): *"7 promotional lists just gained a new friend 👀"* | Your email is shared without clear consent | 🔴 |
 | 16 | **Hidden unsubscribe** | Footer "Unsubscribe" link is the same colour as the footer background, bottom-right corner | Opt-out is invisible | 🔴 |
 | 17 | **Roach motel** | Clicking Unsubscribe: *"Unsubscribing requires a phone call. Hold time may exceed 2 hours."* | Easy to get in, painful to get out | 🔴 |
-| 18 | **Deceptive copy** | Header tagline: *"...one place to manage every subscription (we promise...)"* | Wink that the claim can't be trusted | 🟡 |
+| 18 | **Deceptive copy** | Hero subtitle under the main heading: *"...one place to manage every subscription (we promise...)"* | Wink that the claim can't be trusted | 🟡 |
 
 ### `features.html`
 
@@ -65,7 +65,7 @@ Difficulty: 🟢 easy (visible at first glance) · 🟡 medium (needs reading or
 | 25 | **Forced continuity (Pro)** | *"$29.99/month — Auto-renews, no reminder emails"* | Silent recurring charge | 🟡 |
 | 26 | **Obstructed support (Premium+)** | *"Includes a phone number to call us — maybe"* | Paying customers still can't count on support | 🟡 |
 | 27 | **Default plan chosen for you** | *"Choose a Plan (Or Don't — We'll Choose for You)"* | User choice overridden | 🟢 |
-| 28 | **Obstruction** | Header: *"Our pricing is simple — if you can find it."* | Price info is hard to find | 🟢 |
+| 28 | **Obstruction** | Subtitle under the heading: *"Our pricing is simple — if you can find it."* | Price info is hard to find | 🟢 |
 
 ### `help.html` and `FAQ.html`
 
@@ -73,7 +73,7 @@ Difficulty: 🟢 easy (visible at first glance) · 🟡 medium (needs reading or
 |---|---|---|---|---|
 | 29 | **Support dead end** | `help.html`: big "NO", *"Can't find your answer? Neither can we."* | Help page that doesn't help | 🟢 |
 | 30 | **Obstruction / dead-end loop** | The only link (to the FAQ) leads to a page that just says "LOL" with no way forward | Users are sent in a circle to nothing | 🟡 |
-| 31 | **Deceptive tone** | Header: *"Need help? We make it hard for a reason."* | Admits friction is intentional | 🟢 |
+| 31 | **Deceptive tone** | Small label above the big heading: *"Need help? We make it hard for a reason."* | Admits friction is intentional | 🟢 |
 
 ### Every page
 

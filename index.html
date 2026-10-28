@@ -4,69 +4,116 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title data-i18n="index.title">Subscrivo - Manage Your Subscriptions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <header>
-    <h1>Subscrivo</h1>
-    <p data-i18n="index.tagline">Finally, one place to manage every subscription (we promise...)</p>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="logo" href="index.html"><span class="logo-mark"></span>Subscrivo</a>
+      <nav>
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="features.html" data-i18n="nav.features">Features</a>
+        <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+        <a href="help.html" data-i18n="nav.help">Help</a>
+        <button type="button" id="langToggle" class="lang-toggle" data-i18n="lang.toggle">🇧🇷 Português</button>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <a href="index.html" data-i18n="nav.home">Home</a>
-    <a href="features.html" data-i18n="nav.features">Features</a>
-    <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
-    <a href="help.html" data-i18n="nav.help">Help</a>
-    <button type="button" id="langToggle" class="lang-toggle" data-i18n="lang.toggle">🇧🇷 Português</button>
-  </nav>
   <section class="hero">
-    <h2 data-i18n="hero.h2">Take Back Control of Your Subscriptions</h2>
-    <p data-i18n="hero.p">Start your free trial now — no strings attached*</p>
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow" data-i18n="hero.eyebrow">Subscription management</p>
+        <h1 data-i18n="hero.h2">Take Back Control of Your Subscriptions</h1>
+        <p class="lead" data-i18n="index.tagline">Finally, one place to manage every subscription (we promise...)</p>
+        <p class="hero-sub" data-i18n="hero.p">Start your free trial now — no strings attached*</p>
 
-    <button class="cta-button" id="startTrialBtn" data-i18n="cta.start">Start My Trial</button>
-    <button class="cta-button decline" id="darkTrickBtn" data-i18n="cta.decline">No I dont like Money</button>
+        <div class="hero-actions">
+          <button class="cta-button" id="startTrialBtn" data-i18n="cta.start">Start My Trial</button>
+          <button class="cta-button decline" id="darkTrickBtn" data-i18n="cta.decline">No I dont like Money</button>
+        </div>
 
-    <p class="tiny-note" data-i18n="hero.note">*14-day trial auto-renews at $29.99/month</p>
+        <p class="tiny-note" data-i18n="hero.note">*14-day trial auto-renews at $29.99/month</p>
 
-    <!-- Hidden Credit Card Form -->
-    <div id="creditCardForm">
-      <h3 data-i18n="card.h3">Enter Payment Info</h3>
-      <input type="text" placeholder="Card Number" data-i18n-ph="card.number" required />
-      <input type="text" placeholder="MM/YY" data-i18n-ph="card.mm" required />
-      <input type="text" placeholder="CVC" data-i18n-ph="card.cvc" required />
-      <button class="cta-button" id="submitCardBtn" data-i18n="card.submit">Start Trial Now</button>
+        <!-- Hidden Credit Card Form -->
+        <div id="creditCardForm">
+          <h3 data-i18n="card.h3">Enter Payment Info</h3>
+          <input type="text" placeholder="Card Number" data-i18n-ph="card.number" required />
+          <input type="text" placeholder="MM/YY" data-i18n-ph="card.mm" required />
+          <input type="text" placeholder="CVC" data-i18n-ph="card.cvc" required />
+          <button class="cta-button" id="submitCardBtn" data-i18n="card.submit">Start Trial Now</button>
+        </div>
+      </div>
+
+      <!-- Decorative product screenshot -->
+      <div class="mock" aria-hidden="true">
+        <div class="mock-head">
+          <span data-i18n="mock.title">Your subscriptions</span>
+          <span class="mock-total">$254.97<small data-i18n="mock.total">per month</small></span>
+        </div>
+        <ul class="mock-list">
+          <li>
+            <span class="mock-icon" style="background:#0ea5e9">G</span>
+            <div><strong data-i18n="mock.r1">Gym you visited once</strong><small data-i18n="mock.r1s">Last visit: March 2023</small></div>
+            <span class="mock-price">$49.99</span>
+          </li>
+          <li>
+            <span class="mock-icon" style="background:#e11d48">S7</span>
+            <div><strong data-i18n="mock.r2">Streaming service #7</strong><small data-i18n="mock.r2s">You forgot this one exists</small></div>
+            <span class="mock-price">$15.99</span>
+          </li>
+          <li>
+            <span class="mock-icon" style="background:#16a34a">M</span>
+            <div><strong data-i18n="mock.r3">Meal kit (paused*)</strong><small data-i18n="mock.r3s">*Pausing is not supported</small></div>
+            <span class="mock-price">$89.99</span>
+          </li>
+          <li class="locked">
+            <span class="mock-icon" style="background:#1d4ed8">S+</span>
+            <div><strong>Subscrivo Premium+</strong><small data-i18n="mock.r4s">Cannot be cancelled</small></div>
+            <span class="mock-price">$99.00</span>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 
-  <section class="disguised-ad" id="adBox" data-i18n="ad1">
-    <strong>You may qualify for a $50 reward</strong><br>
-    Click here to find out how
-  </section>
+  <section class="band">
+    <div class="container narrow">
+      <div class="disguised-ad" id="adBox" data-i18n="ad1">
+        <strong>You may qualify for a $50 reward</strong>
+        Click here to find out how
+      </div>
 
-  <section class="fake-form" id="formSection">
-    <h3 data-i18n="form.h3">Create your account to continue</h3>
-    <input type="text" placeholder="Full Name" data-i18n-ph="form.name" required />
-    <input type="email" placeholder="Email Address" data-i18n-ph="form.email" required />
-    <input type="password" placeholder="Create Password" data-i18n-ph="form.password" required />
+      <div class="fake-form" id="formSection">
+        <h3 data-i18n="form.h3">Create your account to continue</h3>
+        <input type="text" placeholder="Full Name" data-i18n-ph="form.name" required />
+        <input type="email" placeholder="Email Address" data-i18n-ph="form.email" required />
+        <input type="password" placeholder="Create Password" data-i18n-ph="form.password" required />
 
-    <div class="prechecked">
-      <label class="checkbox-trick">
-        <span data-i18n="form.check">Subscribe me to partner offers and promotions.</span>
-        <input type="checkbox" checked />
-      </label>
+        <div class="prechecked">
+          <label class="checkbox-trick">
+            <span data-i18n="form.check">Subscribe me to partner offers and promotions.</span>
+            <input type="checkbox" checked />
+          </label>
+        </div>
+
+        <button class="cta-button" id="submitBtn" data-i18n="form.continue">Continue</button>
+      </div>
+
+      <div class="disguised-ad" id="adBox2" data-i18n="ad2">
+        <strong>Single Moms In Your Area🔥🔥🔥(2Km)</strong>
+        Click here to connect with them
+      </div>
     </div>
-
-    <button class="cta-button" id="submitBtn" data-i18n="form.continue">Continue</button>
-  </section>
-
-  <section class="disguised-ad" id="adBox2" data-i18n="ad2">
-    <strong>Single Moms In Your Area🔥🔥🔥(2Km)</strong><br>
-    Click here to connect with them
   </section>
 
   <footer>
-    <span data-i18n="footer.rights">&copy; 2025 Subscrivo Inc. All rights reserved.</span>
+    <div class="container">
+      <span data-i18n="footer.rights">&copy; 2025 Subscrivo Inc. All rights reserved.</span>
+    </div>
     <a href="#" class="unsubscribe" data-i18n="footer.unsubscribe">Unsubscribe</a>
   </footer>
 

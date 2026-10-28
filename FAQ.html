@@ -4,30 +4,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title data-i18n="help.title">Subscrivo | Help Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <header>
-    <h1>Subscrivo</h1>
-    <p data-i18n="help.tagline">Need help? We make it hard for a reason.</p>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="logo" href="index.html"><span class="logo-mark"></span>Subscrivo</a>
+      <nav>
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="features.html" data-i18n="nav.features">Features</a>
+        <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+        <a href="help.html" data-i18n="nav.help">Help</a>
+        <button type="button" id="langToggle" class="lang-toggle" data-i18n="lang.toggle">🇧🇷 Português</button>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <a href="index.html" data-i18n="nav.home">Home</a>
-    <a href="features.html" data-i18n="nav.features">Features</a>
-    <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
-    <a href="help.html" data-i18n="nav.help">Help</a>
-    <button type="button" id="langToggle" class="lang-toggle" data-i18n="lang.toggle">🇧🇷 Português</button>
-  </nav>
-
-  <section class="hero">
-    <p class="emoji-big">🤡</p>
-    <h2>LOL</h2>
+  <section class="hero empty">
+    <div class="container narrow">
+      <p class="eyebrow" data-i18n="help.tagline">Need help? We make it hard for a reason.</p>
+      <h1 class="giant">LOL</h1>
+    </div>
   </section>
 
   <footer>
-    <span data-i18n="footer.rights">&copy; 2025 Subscrivo Inc. All rights reserved.</span>
+    <div class="container">
+      <span data-i18n="footer.rights">&copy; 2025 Subscrivo Inc. All rights reserved.</span>
+    </div>
     <a href="#" class="unsubscribe" data-i18n="footer.unsubscribe">Unsubscribe</a>
   </footer>
 

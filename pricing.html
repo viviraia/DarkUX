@@ -4,40 +4,48 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title data-i18n="pricing.title">Subscrivo | Pricing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <header>
-    <h1>Subscrivo</h1>
-    <p data-i18n="pricing.tagline">Our pricing is simple — if you can find it.</p>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="logo" href="index.html"><span class="logo-mark"></span>Subscrivo</a>
+      <nav>
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="features.html" data-i18n="nav.features">Features</a>
+        <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+        <a href="help.html" data-i18n="nav.help">Help</a>
+        <button type="button" id="langToggle" class="lang-toggle" data-i18n="lang.toggle">🇧🇷 Português</button>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <a href="index.html" data-i18n="nav.home">Home</a>
-    <a href="features.html" data-i18n="nav.features">Features</a>
-    <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
-    <a href="help.html" data-i18n="nav.help">Help</a>
-    <button type="button" id="langToggle" class="lang-toggle" data-i18n="lang.toggle">🇧🇷 Português</button>
-  </nav>
-
   <section class="hero">
-    <h2 data-i18n="pricing.h2">Choose a Plan (Or Don’t — We’ll Choose for You)</h2>
-    <ul class="card-list plans">
-      <li data-i18n="pricing.basic"><strong>Basic</strong> <span class="price">Free forever*</span>
-        <p class="tiny-note">*Until you accidentally upgrade via a hidden toggle</p>
-      </li>
-      <li data-i18n="pricing.pro"><strong>Pro</strong> <span class="price">$29.99/month</span>
-        <p class="tiny-note">Auto-renews, no reminder emails</p>
-      </li>
-      <li data-i18n="pricing.premium"><strong>Premium+</strong> <span class="price">$99/month</span>
-        <p class="tiny-note">Includes a phone number to call us — maybe</p>
-      </li>
-    </ul>
+    <div class="container page-head">
+      <h1 data-i18n="pricing.h2">Choose a Plan (Or Don’t — We’ll Choose for You)</h1>
+      <p class="lead" data-i18n="pricing.tagline">Our pricing is simple — if you can find it.</p>
+      <ul class="card-list plans">
+        <li>
+          <div data-i18n="pricing.basic"><strong>Basic</strong> <span class="price">Free forever*</span><p class="tiny-note">*Until you accidentally upgrade via a hidden toggle</p></div>
+        </li>
+        <li class="featured">
+          <span class="badge" data-i18n="pricing.popular">Most popular</span>
+          <div data-i18n="pricing.pro"><strong>Pro</strong> <span class="price">$29.99/month</span><p class="tiny-note">Auto-renews, no reminder emails</p></div>
+        </li>
+        <li>
+          <div data-i18n="pricing.premium"><strong>Premium+</strong> <span class="price">$99/month</span><p class="tiny-note">Includes a phone number to call us — maybe</p></div>
+        </li>
+      </ul>
+    </div>
   </section>
 
   <footer>
-    <span data-i18n="footer.rights">&copy; 2025 Subscrivo Inc. All rights reserved.</span>
+    <div class="container">
+      <span data-i18n="footer.rights">&copy; 2025 Subscrivo Inc. All rights reserved.</span>
+    </div>
     <a href="#" class="unsubscribe" data-i18n="footer.unsubscribe">Unsubscribe</a>
   </footer>
 
