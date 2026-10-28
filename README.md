@@ -85,3 +85,8 @@ Difficulty: 🟢 easy· 🟡 medium· 🔴 hard.
 | 32 | **Hidden unsubscribe** | Invisible footer link (same as #16) on every page | Opt-out hidden everywhere | 🔴 |
 
 > Counting suggestion: #16 and #32 (and #17) are the same trap repeated; award points once per distinct pattern, or once per page — your call.
+
+
+
+
+Super secret PEDRO PEDRO PEDRO
