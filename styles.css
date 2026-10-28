@@ -1,152 +1,301 @@
+:root {
+  --bg: #fff8ec;
+  --ink: #2d2640;
+  --muted: #6f6785;
+  --brand: #6c5ce7;
+  --brand-dark: #4b3fc4;
+  --good: #00b894;
+  --good-light: #55efc4;
+  --bad: #d63031;
+  --sun: #ffeaa7;
+  --card: #ffffff;
+  --radius: 14px;
+  --shadow: 0 6px 18px rgba(45, 38, 64, 0.12);
+}
+
+* { box-sizing: border-box; }
+
 body {
-font-family: 'Segoe UI', sans-serif;
-background-color: #f8f8f8;
-margin: 0;
-padding: 0;
-color: #333;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background-color: var(--bg);
+  margin: 0;
+  padding: 0;
+  color: var(--ink);
+  line-height: 1.5;
 }
 
 header {
-background-color: #1b1b1b;
-color: white;
-padding: 2rem;
-text-align: center;
+  background: linear-gradient(135deg, #2d2640, var(--brand));
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
 }
 
 header h1 {
-margin: 0;
-font-size: 2.5rem;
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
 }
 
+header h1::before { content: "💸 "; }
+
+header p { margin: 0.4rem 0 0; opacity: 0.9; }
+
 nav {
-display: flex;
-justify-content: space-around;
-background-color: #000;
-padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 2rem;
+  background-color: #1b1730;
+  padding: 0.8rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 nav a {
-color: white;
-text-decoration: none;
-font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.2rem 0.1rem;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: var(--sun);
+  border-bottom-color: var(--sun);
+  outline: none;
 }
 
 .hero {
-padding: 4rem 2rem;
-text-align: center;
-background: linear-gradient(to bottom, #f0f0f0, #ddd);
+  padding: 3rem 1.5rem;
+  text-align: center;
+  background: linear-gradient(to bottom, #fff1d0, var(--bg));
 }
 
-.hero h2 {
-font-size: 2rem;
+.hero > * {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.hero p {
-font-size: 1.2rem;
-color: #666;
+.hero h2 { font-size: 2rem; margin-top: 0; }
+
+.hero p { font-size: 1.2rem; color: var(--muted); }
+
+.hero .tiny-note { margin-top: 1.5rem; }
+
+.tiny-note {
+  font-size: 0.6rem;
+  color: #b9b2c9;
+  margin: 0.3rem 0 0;
 }
 
 .cta-button {
-background-color: #00b894;
-color: white;
-padding: 1rem 2rem;
-border: none;
-border-radius: 4px;
-font-size: 1.2rem;
-cursor: pointer;
-margin-top: 2rem;
+  background-color: var(--good);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 1.5rem 0.4rem 0;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s, background-color 0.15s;
 }
 
 .cta-button:hover {
-background-color: #55efc4;
+  background-color: var(--good-light);
+  transform: translateY(-2px);
+}
+
+.cta-button.decline { background-color: var(--bad); }
+
+.cta-button.decline:hover { background-color: #ff7675; }
+
+#creditCardForm {
+  display: none;
+  margin-top: 2rem;
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+#creditCardForm input,
+.fake-form input:not([type="checkbox"]) {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 2px solid #e3dff0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+input:focus-visible {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.25);
 }
 
 .fake-form {
-background: white;
-max-width: 600px;
-margin: 2rem auto;
-padding: 2rem;
-box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background: var(--card);
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
-.fake-form h3 {
-margin-bottom: 1rem;
+.fake-form h3 { margin-top: 0; margin-bottom: 1rem; }
+
+.fake-form .cta-button { margin-left: 0; }
+
+.checkbox-trick {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--muted);
 }
 
-.fake-form input {
-width: 100%;
-padding: 0.8rem;
-margin-bottom: 1rem;
-border: 1px solid #ccc;
+input[type="checkbox"] {
+  width: auto;
+  flex: none;
+  accent-color: var(--brand);
 }
 
-.prechecked {
-margin-bottom: 0rem;
+.card-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+  text-align: left;
 }
 
-.prechecked input {
-    flex: 0 1 auto; /* Prevent it from growing too much */
-    max-width: 200px; /* Adjust this value as needed */
-
+.card-list li {
+  background: var(--card);
+  padding: 1rem 1.3rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  font-size: 1.1rem;
 }
+
+.card-list li p { font-size: 1rem; margin: 0.4rem 0 0; }
+
+.plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1rem;
+  max-width: 800px !important;
+}
+
+.plans li { text-align: center; border-top: 5px solid var(--brand); }
+
+.plans li:nth-child(2) { border-top-color: var(--good); }
+
+.plans li:nth-child(3) { border-top-color: var(--bad); }
+
+.plans .price { display: block; font-size: 1.6rem; margin: 0.4rem 0; }
+
+.emoji-big { font-size: 4rem; margin: 0; }
 
 footer {
-background-color: #1b1b1b;
-color: white;
-padding: 1rem;
-text-align: center;
-position: relative;
+  background-color: #1b1730;
+  color: white;
+  padding: 1.2rem 1rem 1.8rem;
+  text-align: center;
+  position: relative;
+  margin-top: 2rem;
 }
 
 .unsubscribe {
-font-size: 0.7rem;
-color: #1b1b1b; /* Invisible on purpose */
-position: absolute;
-bottom: 5px;
-right: 10px;
+  font-size: 0.7rem;
+  color: #1b1730; /* Invisible on purpose */
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
 }
 
 .disguised-ad {
-background-color: #dfe6e9;
-padding: 1rem;
-margin: 2rem auto;
-width: 90%;
-max-width: 700px;
-text-align: center;
-border: 1px solid #ccc;
+  background-color: #dfe6e9;
+  padding: 1rem;
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 700px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  transition: background-color 0.2s;
 }
 
 .disguised-ad:hover {
-background-color: #fab1a0;
-cursor: pointer;
-}
-/* Spinner button styling (in case JS fails to disable) */
-button:disabled {
-background-color: #ccc;
-cursor: not-allowed;
+  background-color: #fab1a0;
+  cursor: pointer;
 }
 
-/* Optional: Improve modal appearance */
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Modal trap */
+#trapModal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(20, 15, 40, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+#modalContent {
+  background: #fff;
+  padding: 2rem;
+  border-radius: var(--radius);
+  text-align: center;
+  max-width: 460px;
+  animation: pop 0.25s ease-out;
+}
+
+@keyframes pop {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
 #trapModal button {
-padding: 0.8rem 1.5rem;
-margin: 1rem;
-font-size: 1rem;
-cursor: pointer;
+  padding: 0.8rem 1.5rem;
+  margin: 1rem 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 50px;
+  font-family: inherit;
 }
 
 #noTrap {
-background-color: #ccc;
-border: none;
-color: #111;
+  background-color: #ccc;
+  border: none;
+  color: #111;
 }
 
 #yesTrap {
-background-color: #27ae60;
-border: none;
-color: white;
+  background-color: var(--good);
+  border: none;
+  color: white;
+  font-weight: bold;
 }
 
-.checkbox-trick {
-    display: flex;
-    gap: 1rem;
+@media (max-width: 520px) {
+  header h1 { font-size: 2rem; }
+  .hero h2 { font-size: 1.6rem; }
+  .cta-button { display: block; width: 100%; margin-left: 0; margin-right: 0; }
 }

@@ -61,19 +61,8 @@ document.getElementById("startTrialBtn").addEventListener("click", () => {
     `;
     document.body.appendChild(modal);
   
-    // Styling
-    Object.assign(modal.style, {
-      position: "fixed",
-      top: "0", left: "0", width: "100%", height: "100%",
-      backgroundColor: "rgba(0,0,0,0.8)",
-      display: "flex", justifyContent: "center", alignItems: "center",
-      zIndex: "1000"
-    });
-    const content = modal.querySelector("#modalContent");
-    Object.assign(content.style, {
-      background: "#fff", padding: "2rem", borderRadius: "8px", textAlign: "center"
-    });
-  
+    // Styling lives in styles.css (#trapModal, #modalContent)
+
     // Trap buttons
     modal.querySelector("#yesTrap").addEventListener("click", () => {
       alert("You're signed up! Welcome to Premium+ 🤝");
@@ -81,19 +70,23 @@ document.getElementById("startTrialBtn").addEventListener("click", () => {
     });
   
     const noTrap = modal.querySelector("#noTrap");
-    noTrap.addEventListener("mouseover", () => {
-      // Move button randomly
-      const x = Math.floor(Math.random() * 200 - 100);
-      const y = Math.floor(Math.random() * 100 - 50);
-      noTrap.style.transform = `translate(${x}px, ${y}px)`;
-
-    });
+    const teleport = () => {
+      // Jump to a random spot anywhere on the screen
+      const maxX = window.innerWidth - noTrap.offsetWidth;
+      const maxY = window.innerHeight - noTrap.offsetHeight;
+      noTrap.style.position = "fixed";
+      noTrap.style.margin = "0";
+      noTrap.style.left = `${Math.floor(Math.random() * Math.max(maxX, 0))}px`;
+      noTrap.style.top = `${Math.floor(Math.random() * Math.max(maxY, 0))}px`;
+    };
+    noTrap.addEventListener("mouseover", teleport);
+    noTrap.addEventListener("touchstart", teleport, { passive: true });
 
     modal.querySelector("#noTrap").addEventListener("click", () => {
       alert("This action did not work, redirecting...");
-      window.location.href = "https://www.youtube.com/watch?v=RXKabdUBiWM"
-        modal.remove();
-      });
+      modal.remove();
+      window.location.href = "https://www.youtube.com/watch?v=RXKabdUBiWM";
+    });
 
 
   }
