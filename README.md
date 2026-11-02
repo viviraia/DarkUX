@@ -1,5 +1,8 @@
 # Subscrivo – an awful website
 
+
+https://viviraia.github.io/DarkUX/
+
 Subscrivo is a fake subscription-manager site built to teach students about **dark UX patterns** (a.k.a. deceptive design). It is used in a classroom game where students get a time limit and must spot as many dark patterns as they can. The game itself lives outside this repo — this repo is only the website and the answer key below.
 
 Everything on the site is a joke. Nothing is stored, no card details leave the browser.
